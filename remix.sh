@@ -58,4 +58,6 @@ do
 
   cd ..
   
+  zip -r -9 ${DISTRO_NAME}-${ARCH}.zip ${DISTRO_NAME}-${ARCH}
+
 done
