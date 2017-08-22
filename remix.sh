@@ -41,6 +41,10 @@ do
     unzip ${!ARCHIVE}
   else  
     gzip -dc ${!ARCHIVE} | tar xpv
+    cd savilerow-*/bin
+    rm minion
+    ln -s ../../minion-*/bin/minion minion
+    cd ../..
   fi  
   rm ${!ARCHIVE}
   
@@ -48,7 +52,10 @@ do
   wget ${CONJURE_URL}${!ARCHIVE}
   unzip ${!ARCHIVE}
   rm ${!ARCHIVE}
-  
+
+  cp ../../toolkit/README.md .
+  cp ../../toolkit/install.sh .
+
   cd ..
   
 done
